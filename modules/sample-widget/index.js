@@ -8,22 +8,7 @@ module.exports = {
       selector: {
         type: 'select',
         label: 'Selector',
-        def: false,
-        choices: 'getSelectorChoices'
-      },
-      conditionalField: {
-        type: 'color',
-        label: 'Conditional',
-        if: {
-          selector: false
-        }
-      }
-    }
-  },
-  methods(self) {
-    return {
-      getSelectorChoices(req) {
-        return [
+        choices: [
           {
             value: false,
             label: 'False'
@@ -32,8 +17,8 @@ module.exports = {
             value: true,
             label: 'True'
           }
-        ];
+        ]
       }
-    };
+    }
   }
-}
+};
